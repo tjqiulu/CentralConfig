@@ -1,4 +1,2 @@
-test it by qiulu
-
-
-test it by jiyizha
+#running in company add follow parameter of JVM
+-Dhttp.proxyHost=proxy-sg-singapore.gemalto.com -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy-sg-singapore.gemalto.com -Dhttps.proxyPort=8080
