@@ -15,7 +15,7 @@ public class MySampleRestController {
 	
 	@RequestMapping("/url")
 	public String getUrl() {
-		return "current env is "+name+",url is"+ url;
+		return "Current running env is "+name+",config url is "+ url;
 	}
 	
 }
