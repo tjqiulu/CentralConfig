@@ -33,6 +33,8 @@ public class MySampleRestController {
 	
 	@RequestMapping("/url")
 	public String getUrl() {
+	    ServiceInstance instance = client.getLocalServiceInstance();
+	    logger.info("/url, host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
 		return "Current running env is "+name+",config url is "+ url;
 	}
 	

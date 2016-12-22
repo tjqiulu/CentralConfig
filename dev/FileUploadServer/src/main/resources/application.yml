@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: fileUpload
+
+#      profile: dev
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: "http://localhost:1111/eureka/"

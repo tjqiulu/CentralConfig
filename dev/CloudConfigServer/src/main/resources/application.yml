@@ -3,12 +3,17 @@ server:
 spring:
   application:
     name: config-server
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/ConfigurationCenterInCloud/CentralConfig.git
-          searchPaths: config-repo
+  profiles:
+    active: native
+               
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: https://github.com/ConfigurationCenterInCloud/CentralConfig.git
+#          force-pull: true
+#          searchPaths: config-repo
+
 eureka:
   client:
     serviceUrl:

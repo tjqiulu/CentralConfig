@@ -3,10 +3,10 @@ spring:
     name: myclient
   cloud:
     config:
-      discovery:
-        enabled: true
-        service-id: CONFIG-SERVER
-#      uri: "http://localhost:8888"
+#      discovery:
+#        enabled: true
+#        service-id: CONFIG-SERVER
+      uri: "http://localhost:8888"
 #      profile: dev
 eureka:
   client:
