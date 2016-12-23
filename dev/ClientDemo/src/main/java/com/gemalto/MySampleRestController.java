@@ -18,9 +18,9 @@ public class MySampleRestController {
     @Autowired
     private DiscoveryClient client;
     
-	@Value("${config.form.url}")
+	@Value("${config.form.url:None}")
 	private String url;
-	@Value("${config.form.name}")
+	@Value("${config.form.name:None}")
 	private String name;
 	
     @RequestMapping(value = "/add" ,method = RequestMethod.GET)
