@@ -1,0 +1,1 @@
+http://stackoverflow.com/questions/36494938/debug-run-angular2-typescript-with-visual-studio-code

@@ -1,0 +1,93 @@
+<div class="col-md-12 ">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-3 text-left">
+					<!--<button class="btn btn-info" type="button" (click)="addParameter();">  <i class="fa fa-plus" aria-hidden="true"></i>Add</button>-->
+					<button class="btn btn-info" type="button" (click)="redirectToEditParameter(parameterKey.value);">  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
+				<button class="btn btn-info" type="button" (click)="refresh(parameterKey.value);"><i class="fa fa-refresh" [ngClass]="{'fa-spin':refreshing}" aria-hidden="true"></i>Refresh</button>  
+			</div>
+			<div class="col-md-9">
+
+				<div class="col-md-9 pull-right">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search parameter file ..." #parameterKey>
+						<span class="input-group-btn">
+								<button class="btn btn-info" type="button" (click)="search(parameterKey.value);" [disabled]="ifSearch">
+									<i class="fa fa-search" aria-hidden="true"></i>Search
+								</button>
+							</span>
+					</div>
+
+				</div>
+
+
+
+				<!--<input type="text" class="form-control input-sg pull-right" placeholder="Search parameter key..." #parameterKey/>-->
+				<!--</div>-->
+				<!--<div class="col-md-3">
+					<button type="button" class="btn btn-info pull-left" (click)="search(parameterKey.value);" [disabled]="ifSearch"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+				</div>-->
+			</div>
+
+		</div>
+	</div>
+</div>
+<div class="col-md-12">
+	<!--<div class="carousel-inner">-->
+
+	<!--<div *ngFor="let slide of slides;let i=index" class="item" [class.active]="i == 0">-->
+	<!--<div *ngFor="let parameter of slide.parameters" class="col-md-4 ">-->
+	<table class="table table-hover">
+		<caption>
+			<h3>Parameters </h3>
+		</caption>
+		
+		<thead>
+			<tr>
+				<!--<th >Value</th>-->
+				<th class="col-md-5">Key</th>
+				<th class="col-md-5">Value</th>
+				<!--<th class="col-md-2">Action </th>-->
+			</tr>
+		</thead>
+		
+		<tbody>
+			<!--<parameters-list [parameters]="parameters"></parameters-list>-->
+
+			<tr *ngFor="let parameterAdd of parametersAdd; let i=index;">
+				<td><input type="text" [(ngModel)]="parameterAdd.key" class="form-control input-sg" placeholder="Key..."></td>
+				<td><input type="text" [(ngModel)]="parameterAdd.value" class="form-control input-sg" placeholder="Value..."></td>
+				<td>
+					<a title="comfirm to add" (click)="add(parameterAdd);"><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a title="remove a parameter" (click)="removeParameter(parameterAdd);"><i class="fa fa-minus" aria-hidden="true"></i></a>
+				</td>
+			</tr>
+			<tr *ngFor="let item of parametersSearch; let i=index;">
+				
+				<td *ngIf="!item.ifEdit">{{item.key}}</td>
+				<td *ngIf="!item.ifEdit">{{item.value}}</td>
+				<!--<td *ngIf="!item.ifEdit">
+					<a title="edit a parameter" (click)="edit(item);"><i class="fa fa-pencil-square-o " aria-hidden="true"></i></a>
+					<a title="delete a parameter" (click)="confirmDelete(item);"><i class="fa fa-times" aria-hidden="true"></i></a>
+					
+				</td>-->
+
+				<td *ngIf="item.ifEdit"><input type="text" [(ngModel)]="parameterBeforeEdit.key" class="form-control input-sg"></td>
+				<td *ngIf="item.ifEdit"><input type="text" [(ngModel)]="parameterBeforeEdit.value" class="form-control input-sg"></td>
+				<td *ngIf="item.ifEdit">
+					<a title="comfirm to submit" (click)="update(item);"><i class="fa fa-check" aria-hidden="true"></i></a>
+					<a title="undo" (click)="undo(item);"><i class="fa fa-undo" aria-hidden="true"></i></a>
+
+				</td>
+
+				</tr>
+
+				
+				
+				
+		</tbody>
+		
+	</table>
+	
+	<div>
+	</div>
