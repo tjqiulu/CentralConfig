@@ -14,7 +14,7 @@ spring:
 #          force-pull: true
 #          searchPaths: config-repo
   rabbitmq:
-    host: localhost
+    host: 10.162.105.3
     port: 5672
     username: springcloud
     password: 123456
