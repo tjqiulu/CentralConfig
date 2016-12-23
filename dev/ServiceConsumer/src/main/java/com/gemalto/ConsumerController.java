@@ -41,11 +41,11 @@ public class ConsumerController {
     
     @RequestMapping(value = "/url", method = RequestMethod.GET)
     public String url() {
-        return restTemplate.getForEntity("http://MYCLIENT/url", String.class).getBody();
+        return restTemplate.getForEntity("http://MYCLIENT-DEMO/url", String.class).getBody();
     }
     
     @RequestMapping(value = "/add", method = RequestMethod.GET)
     public String add() {
-        return restTemplate.getForEntity("http://MYCLIENT/add?a=10&b=20", String.class).getBody();
+        return restTemplate.getForEntity("http://MYCLIENT-DEMO/add?a=10&b=20", String.class).getBody();
     }
 }

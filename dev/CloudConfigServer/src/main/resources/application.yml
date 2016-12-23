@@ -13,7 +13,11 @@ spring:
 #          uri: https://github.com/ConfigurationCenterInCloud/CentralConfig.git
 #          force-pull: true
 #          searchPaths: config-repo
-
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springcloud
+    password: 123456
 eureka:
   client:
     serviceUrl:

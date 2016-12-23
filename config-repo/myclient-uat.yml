@@ -1,4 +1,0 @@
-config:
-  form:
-    name: UAT
-    url: "http://localhost:8082"

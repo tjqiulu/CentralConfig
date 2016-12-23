@@ -1,13 +1,18 @@
 spring:
   application:
-    name: myclient
+    name: myclient-demo
   cloud:
     config:
-#      discovery:
-#        enabled: true
-#        service-id: CONFIG-SERVER
-      uri: "http://localhost:8888"
+      enabled: true
+      discovery:
+        service-id: CONFIG-SERVER
+#      uri: ${configserver.url:http://localhost:8888}
 #      profile: dev
+  rabbitmq:
+    host: localhost
+    port: 15672
+    username: springcloud
+    password: 123456
 eureka:
   client:
     serviceUrl:
