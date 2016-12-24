@@ -8,11 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var parameter_1 = require('./parameter');
-var parameter_service_1 = require('./parameter.service');
-var app_service_1 = require('./../app.service');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var parameter_1 = require("./parameter");
+var parameter_service_1 = require("./parameter.service");
+var app_service_1 = require("./../app.service");
 var ParametersViewComponent = (function () {
     // parametersSearch:string[];
     // slides: Slide[];
@@ -23,6 +23,7 @@ var ParametersViewComponent = (function () {
         this.appService = appService;
         this.ifSearch = false;
         this.parametersAdd = [];
+        this.ifSuccess = false;
     }
     ParametersViewComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -139,18 +140,23 @@ var ParametersViewComponent = (function () {
         parameter.ifEdit = false;
     };
     ParametersViewComponent.prototype.refresh = function (key) {
-        this.refreshing = true;
+        var _this = this;
+        // this.refreshing = true;
         this.parameterService.refresh(key);
-        this.refreshing = false;
+        // console.log("testtest");
+        this.ifSuccess = true;
+        setTimeout(function () { return _this.ifSuccess = false; }, 1000);
     };
-    ParametersViewComponent = __decorate([
-        core_1.Component({
-            selector: 'parameters-view',
-            templateUrl: 'app/parameters/parameters-view.component.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, parameter_service_1.ParameterService, app_service_1.AppService])
-    ], ParametersViewComponent);
     return ParametersViewComponent;
 }());
+ParametersViewComponent = __decorate([
+    core_1.Component({
+        selector: 'parameters-view',
+        templateUrl: 'app/parameters/parameters-view.component.html'
+    }),
+    __metadata("design:paramtypes", [router_1.Router,
+        parameter_service_1.ParameterService,
+        app_service_1.AppService])
+], ParametersViewComponent);
 exports.ParametersViewComponent = ParametersViewComponent;
 //# sourceMappingURL=parameters-view.component.js.map

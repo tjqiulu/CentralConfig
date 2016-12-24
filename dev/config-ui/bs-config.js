@@ -77,7 +77,7 @@ function mockGetRestMiddleware(req, res, next) {
       }
 
 
-      if (parsed.pathname.indexOf("/OAPS/resources/") == 0) {
+      if (parsed.pathname.indexOf("/CentralConfig/resources/") == 0) {
             //queryData = require("url").parse(req.url, true).query;
             //   queryData=parsed.query;
             //  method=parsed.method;
@@ -89,8 +89,8 @@ function mockGetRestMiddleware(req, res, next) {
 
 
 
-            if (parsed.pathname.indexOf("/OAPS/resources/customers/") == 0) {
-                  let path = parsed.pathname.replace("/OAPS/resources/customers/", "");
+            if (parsed.pathname.indexOf("/CentralConfig/resources/customers/") == 0) {
+                  let path = parsed.pathname.replace("/CentralConfig/resources/customers/", "");
                   if (req.method == "GET") {
 
                         switch (path) {
@@ -121,8 +121,8 @@ function mockGetRestMiddleware(req, res, next) {
                   }
             }
 
-            if (parsed.pathname.indexOf("/OAPS/resources/parameters/") == 0) {
-                  let path = parsed.pathname.replace("/OAPS/resources/parameters/refresh", "");
+            if (parsed.pathname.indexOf("/CentralConfig/resources/parameters/") == 0) {
+                  let path = parsed.pathname.replace("/CentralConfig/resources/parameters/refresh", "");
                   if (req.method == "POST") {
                         let result = [];
                         // switch (path) {
@@ -132,8 +132,8 @@ function mockGetRestMiddleware(req, res, next) {
                   }
             }
 
-            if (parsed.pathname.indexOf("/OAPS/resources/parameters/") == 0) {
-                  let path = parsed.pathname.replace("/OAPS/resources/parameters/", "");
+            if (parsed.pathname.indexOf("/CentralConfig/resources/parameters/") == 0) {
+                  let path = parsed.pathname.replace("/CentralConfig/resources/parameters/", "");
                   if (req.method == "GET") {
 
                          let result = [];
@@ -263,7 +263,7 @@ function mockGetRestMiddleware(req, res, next) {
                   }
             }
 
-      }else if(parsed.pathname.indexOf("/OAPS/parameters/search/") == 0){
+      }else if(parsed.pathname.indexOf("/CentralConfig/parameters/search/") == 0){
             let result = [];
             console.log("search");
                                                 
@@ -288,7 +288,7 @@ module.exports = function (bs) {
             // "proxy":"admincare/",
             "server": {
                   routes: {
-                        "/OAPS": "."
+                        "/CentralConfig": "."
                   },
                   "middleware": {
                         2: mockGetRestMiddleware

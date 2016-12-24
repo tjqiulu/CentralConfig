@@ -23,6 +23,7 @@ export class ParametersViewComponent {
   parameterBeforeEdit: Parameter;
   refreshing: boolean;
   parametersSearch: Parameter[];
+  ifSuccess:boolean = false;
   // parametersSearch:string[];
   // slides: Slide[];
 
@@ -168,9 +169,12 @@ export class ParametersViewComponent {
   }
 
   refresh(key:string) {
-    this.refreshing = true;
+    // this.refreshing = true;
     this.parameterService.refresh(key);
-    this.refreshing = false;
+    // console.log("testtest");
+    this.ifSuccess = true;
+     setTimeout(() => this.ifSuccess = false, 1000);
+   
   }
 
 

@@ -4,7 +4,10 @@
 			<div class="col-md-3 text-left">
 					<!--<button class="btn btn-info" type="button" (click)="addParameter();">  <i class="fa fa-plus" aria-hidden="true"></i>Add</button>-->
 					<button class="btn btn-info" type="button" (click)="redirectToEditParameter(parameterKey.value);">  <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</button>
-				<button class="btn btn-info" type="button" (click)="refresh(parameterKey.value);"><i class="fa fa-refresh" [ngClass]="{'fa-spin':refreshing}" aria-hidden="true"></i>Refresh</button>  
+				<button class="btn btn-info" type="button" (click)="refresh(parameterKey.value);">
+					<!--<i class="fa fa-refresh" [ngClass]="{'fa-spin':refreshing}" aria-hidden="true"></i>-->
+					<i class="fa fa-cloud-upload" aria-hidden="true"></i>Publish</button>  
+					<span *ngIf="ifSuccess" style="color:green"><i class="fa fa-check-square-o fa-2x" aria-hidden="true"></i></span>
 			</div>
 			<div class="col-md-9">
 

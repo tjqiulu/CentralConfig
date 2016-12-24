@@ -8,11 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var parameter_service_1 = require('./parameter.service');
-var app_service_1 = require('./../app.service');
-var app_model_1 = require('./../app.model');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var parameter_service_1 = require("./parameter.service");
+var app_service_1 = require("./../app.service");
+var app_model_1 = require("./../app.model");
 var ParametersTitleComponent = (function () {
     function ParametersTitleComponent(router, parameterService, _appService) {
         this.router = router;
@@ -20,7 +20,7 @@ var ParametersTitleComponent = (function () {
         this._appService = _appService;
     }
     ParametersTitleComponent.prototype.ngOnInit = function () {
-        var pageInfo = new app_model_1.PageInfo([new app_model_1.Link("", "all parameters")], "Parameters List", "Welcome");
+        var pageInfo = new app_model_1.PageInfo([new app_model_1.Link("", "")], "Central Config", "Warm Welcome to You");
         this._appService.setPageInfo(pageInfo);
         // this.parameterService.getAllParameters().then(datas =>{ datas.forEach((data)=>{
         // let parameter
@@ -70,15 +70,17 @@ var ParametersTitleComponent = (function () {
     ParametersTitleComponent.prototype.newParameter = function () {
         this.router.navigate(['/campaign/create']);
     };
-    ParametersTitleComponent = __decorate([
-        core_1.Component({
-            selector: 'parameters-title',
-            templateUrl: 'app/parameters/parameters-title.component.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, parameter_service_1.ParameterService, app_service_1.AppService])
-    ], ParametersTitleComponent);
     return ParametersTitleComponent;
 }());
+ParametersTitleComponent = __decorate([
+    core_1.Component({
+        selector: 'parameters-title',
+        templateUrl: 'app/parameters/parameters-title.component.html'
+    }),
+    __metadata("design:paramtypes", [router_1.Router,
+        parameter_service_1.ParameterService,
+        app_service_1.AppService])
+], ParametersTitleComponent);
 exports.ParametersTitleComponent = ParametersTitleComponent;
 var Slide = (function () {
     function Slide() {

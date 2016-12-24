@@ -8,11 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
+var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
 // import { CampaignService } from './campaign.service';
-var app_service_1 = require('./../app.service');
-var app_model_1 = require('./../app.model');
+var app_service_1 = require("./../app.service");
+var app_model_1 = require("./../app.model");
 var ParametersContainerComponent = (function () {
     function ParametersContainerComponent(_router, 
         // private campaignService: CampaignService, 
@@ -24,13 +24,14 @@ var ParametersContainerComponent = (function () {
         var pageInfo = new app_model_1.PageInfo([new app_model_1.Link("", "all parameters")], "Parameters List", "Welcome & have a good day~");
         this._appService.setPageInfo(pageInfo);
     };
-    ParametersContainerComponent = __decorate([
-        core_1.Component({
-            templateUrl: 'app/parameters/parameters-container.component.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, app_service_1.AppService])
-    ], ParametersContainerComponent);
     return ParametersContainerComponent;
 }());
+ParametersContainerComponent = __decorate([
+    core_1.Component({
+        templateUrl: 'app/parameters/parameters-container.component.html'
+    }),
+    __metadata("design:paramtypes", [router_1.Router,
+        app_service_1.AppService])
+], ParametersContainerComponent);
 exports.ParametersContainerComponent = ParametersContainerComponent;
 //# sourceMappingURL=parameters-container.component.js.map

@@ -27,7 +27,7 @@ export class ParametersTitleComponent {
   ngOnInit() {
 
    
-    let pageInfo: PageInfo = new PageInfo([new Link("", "all parameters")], "Parameters List", "Welcome");
+    let pageInfo: PageInfo = new PageInfo([new Link("", "")], "Central Config", "Warm Welcome to You");
     this._appService.setPageInfo(pageInfo);
    
     // this.parameterService.getAllParameters().then(datas =>{ datas.forEach((data)=>{

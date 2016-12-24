@@ -8,12 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require('@angular/core');
-var http_1 = require('@angular/http');
-require('rxjs/add/operator/toPromise');
-var app_service_1 = require('../app.service');
-var router_1 = require('@angular/router');
-var parameter_1 = require('./parameter');
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+require("rxjs/add/operator/toPromise");
+var app_service_1 = require("../app.service");
+var router_1 = require("@angular/router");
+var parameter_1 = require("./parameter");
 var ParameterService = (function () {
     function ParameterService(router, http, appService) {
         this.router = router;
@@ -58,12 +58,12 @@ var ParameterService = (function () {
             .toPromise()
             .then(function (response) { return parameter_1.Parameter.createMany(response.text()); });
     };
-    ParameterService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [router_1.Router, http_1.Http, app_service_1.AppService])
-    ], ParameterService);
     return ParameterService;
 }());
+ParameterService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [router_1.Router, http_1.Http, app_service_1.AppService])
+], ParameterService);
 exports.ParameterService = ParameterService;
 var Filter = (function () {
     function Filter() {
