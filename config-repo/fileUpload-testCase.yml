@@ -7,4 +7,5 @@ config:
     author : qiuqiuTeam
     email : blah@email.test
     twitter : username
-    feedburner : feedname
+    feedburner : feednameXXXXXX(initial value is feedname,I will change it for test bus/refresh,so now it like this)
+    
