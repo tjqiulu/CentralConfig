@@ -1,4 +1,4 @@
 config:
   form:
-    name: DEVdemo
-    url: "http://localhost:8080"
+    name: DEV
+    url: "http://localhost:8085"
