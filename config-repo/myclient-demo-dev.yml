@@ -1,4 +1,4 @@
 config:
   form:
-    name: DEV
+    name: DEVwangju
     url: "http://localhost:8085"
