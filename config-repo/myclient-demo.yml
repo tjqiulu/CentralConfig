@@ -1,4 +1,4 @@
 config:
   form:
-    name: OFFICAL
+    name: OFFICAL-test-update
     url: "http://localhost:8085"
