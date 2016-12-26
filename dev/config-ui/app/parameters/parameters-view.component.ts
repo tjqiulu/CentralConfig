@@ -78,7 +78,7 @@ export class ParametersViewComponent {
     if (key && (key.indexOf(".properties") > 0)) {
       key = key.slice(0, key.indexOf('.properties'));
     }
-    console.debug(key);
+    //console.debug(key);
     this.parameterService.getParameters(key).then(datas => {
 
       // console.log(datas);
