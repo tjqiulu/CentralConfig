@@ -1,0 +1,11 @@
+config:
+  form:
+    name: testCase
+    url: "http://localhost:7777"
+    title : Jekyll Bootstrap
+    tagline: Site Tagline
+    author : qiuqiuTeam
+    email : blah@email.test
+    twitter : username
+    feedburner : feednameXXXXXX
+    
