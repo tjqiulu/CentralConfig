@@ -4,14 +4,15 @@ spring:
   application:
     name: config-server-kafka
   profiles:
-    active: native
+          #active: native
+    active: prod 
   cloud:
     config:
       server:
-#        git:
-#          uri: https://github.com/ConfigurationCenterInCloud/CentralConfig.git
-#          force-pull: true
-         searchPaths: config-repo
+        git:
+          uri: https://github.com/ConfigurationCenterInCloud/CentralConfig.git
+          force-pull: true
+          #         searchPaths: config-repo
 # kafka   
     stream:
       kafka:

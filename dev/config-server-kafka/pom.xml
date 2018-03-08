@@ -12,9 +12,9 @@
 	<description>config-server-kafkat for Spring Boot</description>
 
 	<parent>
-    <groupId>demo.spring.qiulu</groupId> 
-    <artifactId>root</artifactId> 
-    <version>1.0.0</version> 
+    <groupId>demo.spring.qiulu</groupId>
+    <artifactId>root</artifactId>
+    <version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
