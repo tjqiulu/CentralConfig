@@ -1,0 +1,24 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config-server-kafka
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+#        git:
+#          uri: https://github.com/ConfigurationCenterInCloud/CentralConfig.git
+#          force-pull: true
+         searchPaths: config-repo
+# kafka   
+    stream:
+      kafka:
+        binder:
+          zk-nodes: "kekexili:2181"
+          brokers: "kekexili:9092"
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: "http://localhost:1111/eureka/"
